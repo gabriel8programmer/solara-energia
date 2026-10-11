@@ -1,0 +1,217 @@
+@import './variables.css';
+
+/* ---------- RESET & BASE ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* Acessibilidade de foco */
+:focus-visible {
+  outline: 2px solid var(--yellow-dark);
+  outline-offset: 3px;
+}
+
+/* ---------- ESTRUTURA & CONTAINER ---------- */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 88px 0;
+  position: relative;
+}
+
+.section-head {
+  max-width: 720px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 3.6vw, 42px);
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ---------- EYEBROW / BADGE ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--yellow-soft);
+  color: var(--yellow-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.eyebrow.on-dark {
+  background: rgba(255, 201, 60, 0.15);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 201, 60, 0.25);
+}
+
+.eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yellow-dark);
+  box-shadow: 0 0 0 3px rgba(240, 165, 0, 0.2);
+}
+
+.eyebrow.on-dark .dot {
+  background: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 201, 60, 0.25);
+}
+
+/* ---------- BOTÕES ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: var(--blue);
+  box-shadow: 0 8px 20px var(--yellow-glow);
+}
+
+.btn-primary:hover {
+  background: var(--yellow-dark);
+  color: var(--blue);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(240, 165, 0, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--line);
+}
+
+.btn-outline:hover {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  color: var(--blue-2);
+}
+
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost-light:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- ANIMAÇÃO DE REVELAÇÃO SUAVE (SCROLL) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- AJUSTES RESPONSIVOS GLOBAIS ---------- */
+@media (max-width: 1024px) {
+  section {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 18px;
+  }
+  section {
+    padding: 56px 0;
+  }
+  .section-head {
+    margin-bottom: 38px;
+  }
+  .section-head p {
+    font-size: 15.5px;
+  }
+}

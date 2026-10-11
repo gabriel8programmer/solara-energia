@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071A38"/>
+      <stop offset="60%" stop-color="#0B2A5B"/>
+      <stop offset="100%" stop-color="#12408A"/>
+    </linearGradient>
+    <linearGradient id="glow-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD447"/>
+      <stop offset="100%" stop-color="#FFAE00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Subtle Solar Grid Lines -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="2">
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+  </g>
+
+  <!-- Sun Graphic Highlight -->
+  <circle cx="1020" cy="180" r="180" fill="#FFAE00" opacity="0.12"/>
+  <circle cx="1020" cy="180" r="90" fill="#FFD447" opacity="0.2"/>
+
+  <!-- Logo Mark -->
+  <g transform="translate(100, 90)">
+    <rect width="72" height="72" rx="20" fill="url(#glow-gold)"/>
+    <circle cx="36" cy="36" r="14" fill="#0B2A5B"/>
+    <path d="M36 12 V18" stroke="#0B2A5B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M36 54 V60" stroke="#0B2A5B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M12 36 H18" stroke="#0B2A5B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M54 36 H60" stroke="#0B2A5B" stroke-width="4" stroke-linecap="round"/>
+    <text x="92" y="52" font-family="system-ui, sans-serif" font-weight="800" font-size="44" fill="#FFFFFF">Solara <tspan fill="#FFD447">Energia</tspan></text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="270" font-family="system-ui, sans-serif" font-weight="800" font-size="56" fill="#FFFFFF">
+    Reduza até 95% da sua conta
+  </text>
+  <text x="100" y="340" font-family="system-ui, sans-serif" font-weight="800" font-size="56" fill="#FFD447">
+    de luz com energia solar.
+  </text>
+
+  <!-- Description -->
+  <text x="100" y="420" font-family="system-ui, sans-serif" font-size="24" fill="#E3E9F2">
+    Sistemas fotovoltaicos sob medida para residências e empresas em todo o Brasil.
+  </text>
+  <text x="100" y="460" font-family="system-ui, sans-serif" font-size="24" fill="#E3E9F2">
+    Garantia de 25 anos • Homologação inclusa • Payback em até 4 anos
+  </text>
+
+  <!-- Pill / Badges -->
+  <g transform="translate(100, 520)">
+    <rect width="260" height="48" rx="24" fill="#FFD447"/>
+    <text x="130" y="30" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#0B2A5B" text-anchor="middle">Simule sua economia</text>
+  </g>
+  <g transform="translate(380, 520)">
+    <rect width="220" height="48" rx="24" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)"/>
+    <text x="110" y="30" font-family="system-ui, sans-serif" font-weight="600" font-size="18" fill="#FFFFFF" text-anchor="middle">+3.200 instalações</text>
+  </g>
+</svg>

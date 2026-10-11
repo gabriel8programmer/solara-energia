@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="solara-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD447"/>
+      <stop offset="50%" stop-color="#FFAE00"/>
+      <stop offset="100%" stop-color="#E68A00"/>
+    </linearGradient>
+    <linearGradient id="solara-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3778"/>
+      <stop offset="100%" stop-color="#071A38"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#FFAE00" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="48" height="48" rx="14" fill="url(#solara-blue)"/>
+  
+  <!-- Subtle Panel Grid Lines -->
+  <path d="M6 34 L42 34" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2"/>
+  <path d="M12 42 L24 26 L36 42" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.2"/>
+
+  <!-- Solara Sun Emblem (Sun core + modern photovoltaic rays) -->
+  <g filter="url(#glow)">
+    <!-- Sun Core -->
+    <circle cx="24" cy="22" r="7.5" fill="url(#solara-gold)"/>
+
+    <!-- Dynamic Solar Rays -->
+    <path d="M24 7 V11" stroke="url(#solara-gold)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M24 33 V37" stroke="url(#solara-gold)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M9 22 H13" stroke="url(#solara-gold)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M35 22 H39" stroke="url(#solara-gold)" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- Diagonal Rays -->
+    <path d="M13.4 11.4 L16.2 14.2" stroke="url(#solara-gold)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M31.8 29.8 L34.6 32.6" stroke="url(#solara-gold)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M34.6 11.4 L31.8 14.2" stroke="url(#solara-gold)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M16.2 29.8 L13.4 32.6" stroke="url(#solara-gold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- Center Energy Flash / Spark -->
+    <circle cx="21.5" cy="19.5" r="2.2" fill="#FFFFFF" fill-opacity="0.8"/>
+  </g>
+</svg>
